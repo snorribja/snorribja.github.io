@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Snorri Bjarkason</title>
+  <meta name="title" content="Snorri Bjarkason">
+  <meta name="description" content="Snorri Bjarkason portfolio">
+
+  <link rel="shortcut icon" href="./assets/images/sn_logo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preload" as="image" href="./assets/images/snorri_face.jpg">
+
+</head>
+
+<body>
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/sn_logo.png" width="90" height="40" alt="Snorri page home">
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Snorri Bjarkason</h1>
+
+            <p class="hero-subtitle">
+              Research Intern at Nox Medical
+            </p>
+
+            <div class="hero-banner">
+              <img src="./assets/images/snorri_face.jpg" width="800" height="800" alt="snorri bjarkason face" class="w-100">
+            </div>
+
+            <p class="section-text">
+              Hi, I'm Snorri Bjarkason, a passionate software engineer who loves working on exciting coding projects. In my free time, I likee watching football and exploring new coding challenges!
+            </p>
+
+            <a href="assets/cv/snorri_bjarkason_cv.pdf" class="btn has-before" download>
+              <span class="span">Download CV</span>
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </a>            
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="service" aria-labelledby="service-label">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <p class="section-subtitle">
+                Where I’ve Worked
+              </p>
+
+              <h2 class="h2 section-title" id="service-label">My job experiance</h2>
+            </div>
+
+            <p class="section-text">
+              This section highlights my professional experience across research, software development, and teaching. 
+              I’ve worked on projects ranging from AI-driven sleep diagnostics to large-scale insurance software systems, 
+              as well as supporting university courses in operating systems and programming. 
+              Each role has strengthened my technical skills and ability to solve problems in collaborative environments.
+            </p>            
+
+          </div>
+
+          <div class="slider" data-slider>
+
+            <ul class="slider-container service-list" data-slider-container>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+              
+                  <div class="card-icon">
+                    <ion-icon name="flask"></ion-icon>
+                  </div>
+              
+                  <h3 class="h3 card-title">Research Intern at Nox Medical</h3>
+              
+                  <p class="card-text">
+                    As a Research Intern in Nox Medical’s Research Team, I contributed to applied industrial research in sleep diagnostics. My work included developing and evaluating AI/ML models—such as CNNs and ResNets—for physiological signal analysis, processing EEG, ECG, and breathing data from sleep studies, and implementing custom statistical analyses. I also supported research publications by preparing figures, results, and technical documentation, and collaborated with scientists and engineers to explore high-impact solutions for diagnostic and treatment innovations.
+                  </p>
+              
+                  <span class="text-lg card-number">01</span>
+              
+                  <a href="https://noxmedical.com/about/" 
+                     class="layer-link" 
+                     aria-label="About Nox Medical" 
+                     onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;">
+                  </a>
+              
+                </div>
+              </li>              
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="code-slash"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">TIA software developer at VÍS</h3>
+
+                  <p class="card-text">
+                    I was responsible for enhancing the TIA insurance platform by creating dynamic output APIs hosted from the database and developing Spring Boot APIs to automate various processes. I focused on preventing users from exploiting the Pay-As-You-Drive car insurance program. Additionally, I retrieved complex data sets using advanced SQL queries to provide valuable insights for team members. I also implemented error prevention mechanisms in batch processes to ensure smooth operations and data integrity. TIA is a modular insurance software solution designed to optimize core processes like policy administration, claims handling, and billing. It supports digital transformation, offering flexibility, automation, and integration with third-party systems to enhance operational efficiency for insurers.
+                  </p>
+
+                  <span class="text-lg card-number">02</span>
+
+                  <a href="https://vis.is/en" 
+                    class="layer-link" 
+                    aria-label="About VÍS tryggingar"
+                    onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;">
+                  </a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="id-card"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Teaching Assistant at RU</h3>
+
+                  <p class="card-text">
+                    As a Teaching Assistant for Operating Systems and Python Programming, I helped students understand concepts such as process scheduling, memory management, and file systems through explanations, examples, and hands-on exercises. I also assisted with Python coursework, guiding students in debugging, writing efficient algorithms, and developing applications. My responsibilities included grading assignments, conducting code reviews, creating supplemental materials, and providing clear, constructive feedback to support learning and problem-solving.                                                                                                                    
+                  </p>
+
+                  <span class="text-lg card-number">03</span>
+
+                  <a href="https://www.ru.is/en/about-ru" 
+                    class="layer-link" 
+                    aria-label="About Reykjavík University"
+                    onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;">
+                  </a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="code-download"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Software Developer at VÍS (Internship)</h3>
+
+                  <p class="card-text">
+                    During my internship at VÍS, I contributed to integrating dynamic APIs into internal systems, specifically working on the "Skútan" project. I integrated Samgöngustofan's marine and boat insurance API to enhance VÍS’s internal capabilities, improving efficiency and automation within the insurance platform.
+                  </p>
+
+                  <span class="text-lg card-number">04</span>
+
+                  <a href="https://vis.is/en" 
+                    class="layer-link" 
+                    aria-label="About VÍS tryggingar"
+                    onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;">
+                  </a>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="slider-controls">
+              <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+
+              <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="section skills" aria-label="technical skills">
+        <div class="container">
+          <p class="section-subtitle">What I know</p>
+      
+          <h2 class="h2 section-title">Technical Skills and Tools Expertise</h2>
+      
+          <div class="skills-columns">
+              
+            <!-- First Column: Programming Languages -->
+            <div class="skills-column"> 
+              <h3 class="column-title">Languages</h3>
+              <ul class="skills-list">
+                <li>Python</li>
+                <li>C/C++</li>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>PL/SQL</li>
+                <li>R</li>
+                <li>Go</li>
+                <li>Bash/Shell Scripting</li>
+                <li>TypeScript</li>
+              </ul>
+            </div>
+      
+            <!-- Second Column: Python Libraries -->
+            <div class="skills-column">
+              <h3 class="column-title">Libraries</h3>
+              <ul class="skills-list">
+                <li>NumPy</li>
+                <li>SciPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>Seaborn</li>
+                <li>Requests</li>
+                <li>Scikit-learn</li>
+                <li>Flask</li>
+                <li>Django</li>
+                <li>FastAPI</li>
+                <li>BeautifulSoup</li>
+              </ul>
+            </div>
+      
+            <!-- Third Column: Enterprise Tools -->
+            <div class="skills-column">
+              <h3 class="column-title">Enterprise Tools</h3>
+              <ul class="skills-list">
+                <li>Oracle</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Supabase</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Bitbucket</li>
+                <li>Jenkins</li>
+                <li>JIRA</li>
+                <li>Confluence</li>
+                <li>AWS</li>
+              </ul>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section class="portfolio" aria-labelledby="portfolio-label">
+
+        <div class="title-wrapper container">
+
+          <div>
+            <p class="section-subtitle" id="portfolio-label">My Projects</p>
+
+            <h2 class="h2 section-title">Portfolio</h2>
+          </div>
+
+          <p class="section-text">
+            A selection of projects I’ve worked on, ranging from distributed systems and machine learning 
+            to backend development and network security. Each project reflects my interest in solving 
+            complex problems and building practical, well-engineered solutions.
+          </p>          
+
+        </div>
+
+        <div class="slider" data-slider>
+
+          <ul class="slider-container" data-slider-container>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./assets/images/raft.png" width="600" height="600" loading="lazy" alt="raft consensus algorithm"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Raft Consensus Algortihm</h3>
+
+                  <p class="card-text">Distributed Systems</p>
+                </div>
+
+                <a href="https://github.com/snorribja/Snorri/tree/main/Raft" class="layer-link" onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;"></a>
+
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./assets/images/flappy.png" width="600" height="600" loading="lazy" alt="flappy bird machine learning project"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Flappy Bird Q-Learning</h3>
+
+                  <p class="card-text">Machine Learning</p>
+                </div>
+
+                <a href="https://github.com/snorribja/Snorri/tree/main/Flappy%20Bird%20Q-learning" class="layer-link" onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./assets/images/fifa.png" width="600" height="600" loading="lazy" alt="fifa classification project"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Fifa Player Classification</h3>
+
+                  <p class="card-text">Machine Learning</p>
+                </div>
+
+                <a href="https://github.com/snorribja/Snorri/tree/main/Raft" class="layer-link" onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./assets/images/aasm.png" width="600" height="600" loading="lazy" alt="automated attack surface mapping project"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Automated Attack Surface Mapping</h3>
+
+                  <p class="card-text">Network Security / Website</p>
+                </div>
+
+                <a href="https://hdl.handle.net/1946/50482" class="layer-link" onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./assets/images/careeon.png" width="600" height="600" loading="lazy" alt="careeon project"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Careeon Job Search Platform</h3>
+
+                  <p class="card-text">Website / Backend</p>
+                </div>
+
+                <a href="https://github.com/robertlogi/careeon/tree/f391075cd114f50582244b85d947b6d151917605" class="layer-link" onclick="window.open(this.href, '_blank', 'width=800,height=600'); return false;"></a>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+
+            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Education and Courses
+      -->
+
+      <section class="section ec" aria-labelledby="ec-label">
+        <div class="container">
+
+          <p class="section-subtitle" id="ec-label">Education and Courses</p>
+
+          <h2 class="h2 section-title">My Education</h2>
+
+          <ul class="ec-list">
+
+            <li>
+              <div class="ec-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/hr-logo.png" width="700" height="470" loading="lazy"
+                    alt="BSc Software Engineering - Reykjavík University" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div>
+                    <h3 class="h3 card-title">BSc in Software Engineering - Reykjavík University</h3>
+
+                    <p class="card-text">
+                      A three-year, 180 ECTS program focused on engineering methods for designing and developing software systems, combining theory with practical, industry-linked projects. The internationally accredited degree (ASIIN) covered programming, algorithms, and software architecture, and I chose to use my elective courses for machine learning and network security.
+                    </p>
+
+                    <a href="https://www.ru.is/en/departments/dcs" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <h2 class="h2 section-title">Courses I have taken</h2>
+
+          <ul class="ec-list">
+
+            <li>
+              <div class="ec-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/deeplearning_stanford_coursera.png" width="700" height="470" loading="lazy"
+                    alt="Advanced Learning Algorithms - Coursera" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div>
+                    <h3 class="h3 card-title">Advanced Learning Algorithms - Coursera</h3>
+
+                    <p class="card-text">
+                      Advanced Learning Algorithms is part of the Machine Learning Specialization by DeepLearning.AI and Stanford Online, taught by Andrew Ng. The course introduces core algorithms such as neural networks, decision trees, random forests, and boosted trees, while teaching best practices to ensure models generalize well to real-world tasks. Through a mix of theory and hands-on assignments, learners build practical skills in supervised learning, performance tuning, and applied machine learning techniques.
+                    </p>
+
+                    <a href="https://www.coursera.org/account/accomplishments/records/GD2BJWEYAPZD" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="ec-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/arcanum.png" width="700" height="470" loading="lazy"
+                    alt="Arcanum security logo" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div>
+                    <h3 class="h3 card-title">The Bug Hunter’s Methodology </h3>
+
+                    <p class="card-text">
+                      The Bug Hunter’s Methodology (TBHM) is an advanced offensive security training program by Jason Haddix, designed for experienced web app testers, red teamers, and bug bounty hunters. The Core course offers a structured, data-driven approach to uncovering real-world vulnerabilities, covering reconnaissance, application analysis, automation, and exploitation techniques. Hosted at Reykjavík University over three days, TBHM emphasizes practical, high-impact tips and tools rather than beginner material.
+                    </p>
+
+                    <a href="https://www.arcanum-sec.com/training/the-bug-hunters-methodology" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="ec-card">
+
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470;">
+                  <img src="./assets/images/deeplearning_stanford_coursera.png" width="700" height="470" loading="lazy"
+                    alt="Supervised Machine Learning: Regression and Classification - Coursera" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div>
+                    <h3 class="h3 card-title">Supervised Machine Learning: Regression and Classification - Coursera</h3>
+
+                    <p class="card-text">
+                      Supervised Machine Learning: Regression and Classification is the first course in the Machine Learning Specialization by DeepLearning.AI and Stanford Online, taught by Andrew Ng. It introduces core supervised learning techniques, including linear regression for prediction and logistic regression for classification, using Python with NumPy and scikit-learn. Learners gain practical experience in building, training, and evaluating models, while also developing skills in feature engineering, statistical modeling, and predictive analytics.
+                    </p>
+
+                    <a href="https://www.coursera.org/account/accomplishments/records/GU2ZKXBQ2ARG" class="btn has-before">
+                      <span class="span">Read more</span>
+
+                      <ion-icon name="arrow-forward"></ion-icon>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in touch</p>
+        </li>
+
+        <li>
+          <a href="mailto:snorribjarka@gmail.com" class="footer-link">snorribjarka@gmail.com</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Locations</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Reykjavík — Iceland</a>
+        </li>
+
+      </ul>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="https://www.instagram.com/snorri03/" class="social-link" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="social-link" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>          
+        </li>
+
+      </ul>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
