@@ -9,7 +9,7 @@ const experiences = [
     icon: FlaskConical,
     title: 'Research Engineer at Nox Medical',
     description:
-      'Contributed to applied industrial research in sleep diagnostics. Developed and evaluated AI/ML models—CNNs and ResNets—for physiological signal analysis, processed EEG, ECG, and breathing data from sleep studies, and implemented custom statistical analyses. Supported research publications and collaborated with scientists and engineers.',
+      'Contributed to applied industrial research in sleep diagnostics. Developed and evaluated AI/ML models, CNNs and ResNets, for physiological signal analysis, processed EEG, ECG, and breathing data from sleep studies, and implemented custom statistical analyses. Supported research publications and collaborated with scientists and engineers.',
     link: 'https://noxmedical.com/about/',
     linkLabel: 'About Nox Medical',
   },
@@ -69,7 +69,7 @@ export default function ExperienceSection() {
           transition={{ delay: 0.2 }}
           className="text-muted-foreground max-w-2xl mb-12 text-lg leading-relaxed"
         >
-          Professional experience across research, software development, and teaching — from AI-driven sleep diagnostics to large-scale insurance software systems.
+          Professional experience across research, software development, and teaching, from AI-driven sleep diagnostics to large-scale insurance software systems.
         </motion.p>
 
         {/* Desktop: all cards grid */}

@@ -86,7 +86,7 @@ export default function HeroSection() {
               className="flex flex-wrap gap-4"
             >
               <a
-                href="assets/cv/resume-snorri-bjarkason.pdf"
+                href="./resume-snorri-bjarkason.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-sm transition-all duration-300 group"
                 style={{

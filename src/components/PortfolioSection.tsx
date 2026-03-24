@@ -5,7 +5,7 @@ import raftImg from '@/assets/raft.png';
 import flappyImg from '@/assets/flappy.png';
 import fifaImg from '@/assets/fifa.png';
 import careeonImg from '@/assets/careeon.png';
-import arcanumImg from '@/assets/arcanum.png';
+import aasmImg from '@/assets/aasm.png';
 
 const projects = [
   {
@@ -29,14 +29,14 @@ const projects = [
   {
     title: 'Automated Attack Surface Mapping',
     category: 'Network Security',
-    image: arcanumImg,
+    image: aasmImg,
     link: 'https://hdl.handle.net/1946/50482',
   },
   {
     title: 'Careeon Job Search Platform',
     category: 'Website / Backend',
     image: careeonImg,
-    link: 'https://github.com/robertlogi/careeon',
+    link: 'https://careeon.onrender.com/',
   },
 ];
 
