@@ -42,11 +42,14 @@ const projects = [
 
 export default function PortfolioSection() {
   const [current, setCurrent] = useState(0);
+
   const visible = 3;
   const total = projects.length;
+  const gapPx = 24; // gap-6 = 24px
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(total - visible, c + 1));
+
   const canPrev = current > 0;
   const canNext = current < total - visible;
 
@@ -59,8 +62,12 @@ export default function PortfolioSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-accent font-display font-semibold tracking-widest uppercase text-sm mb-3">My Projects</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-extrabold text-primary">Portfolio</h2>
+            <p className="text-accent font-display font-semibold tracking-widest uppercase text-sm mb-3">
+              My Projects
+            </p>
+            <h2 className="font-display text-4xl lg:text-5xl font-extrabold text-primary">
+              Portfolio
+            </h2>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-3">
@@ -84,7 +91,9 @@ export default function PortfolioSection() {
         {/* Desktop slider */}
         <div className="hidden md:block overflow-hidden">
           <motion.div
-            animate={{ x: `${-current * (100 / visible)}%` }}
+            animate={{
+              x: `calc(-${current} * ((100% - ${(visible - 1) * gapPx}px) / ${visible} + ${gapPx}px))`,
+            }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className="flex gap-6"
           >
@@ -98,8 +107,12 @@ export default function PortfolioSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group flex-shrink-0 w-[calc(33.33%-1rem)] relative rounded-2xl overflow-hidden block"
-                style={{ aspectRatio: '1', border: '1px solid hsl(var(--border))' }}
+                className="group flex-shrink-0 relative rounded-2xl overflow-hidden block"
+                style={{
+                  width: `calc((100% - ${(visible - 1) * gapPx}px) / ${visible})`,
+                  aspectRatio: '1',
+                  border: '1px solid hsl(var(--border))',
+                }}
               >
                 <img
                   src={project.image}
@@ -109,18 +122,26 @@ export default function PortfolioSection() {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+
                 <div
                   className="absolute inset-0 flex flex-col justify-end p-6 transition-opacity duration-300"
                   style={{
-                    background: 'linear-gradient(to top, hsl(var(--background) / 0.95) 0%, hsl(var(--background) / 0.5) 50%, transparent 100%)',
+                    background:
+                      'linear-gradient(to top, hsl(var(--background) / 0.95) 0%, hsl(var(--background) / 0.5) 50%, transparent 100%)',
                   }}
                 >
                   <span className="text-accent text-xs font-display font-semibold tracking-wider uppercase mb-1">
                     {project.category}
                   </span>
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-display font-bold text-primary text-lg">{project.title}</h3>
-                    <ExternalLink size={16} className="text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 ml-2" />
+
+                  <div className="flex items-end justify-between gap-3">
+                    <h3 className="font-display font-bold text-primary text-lg leading-tight">
+                      {project.title}
+                    </h3>
+                    <ExternalLink
+                      size={16}
+                      className="text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0"
+                    />
                   </div>
                 </div>
               </motion.a>
@@ -139,13 +160,26 @@ export default function PortfolioSection() {
               className="group relative rounded-2xl overflow-hidden block aspect-square"
               style={{ border: '1px solid hsl(var(--border))' }}
             >
-              <img src={project.image} alt={project.title} width={600} height={600} loading="lazy" className="w-full h-full object-cover" />
+              <img
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={600}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
               <div
                 className="absolute inset-0 flex flex-col justify-end p-4"
-                style={{ background: 'linear-gradient(to top, hsl(var(--background) / 0.95), transparent)' }}
+                style={{
+                  background: 'linear-gradient(to top, hsl(var(--background) / 0.95), transparent)',
+                }}
               >
-                <span className="text-accent text-xs font-display font-semibold tracking-wider uppercase mb-1">{project.category}</span>
-                <h3 className="font-display font-bold text-primary">{project.title}</h3>
+                <span className="text-accent text-xs font-display font-semibold tracking-wider uppercase mb-1">
+                  {project.category}
+                </span>
+                <h3 className="font-display font-bold text-primary">
+                  {project.title}
+                </h3>
               </div>
             </a>
           ))}
