@@ -6,8 +6,22 @@ import flappyImg from '@/assets/flappy.png';
 import fifaImg from '@/assets/fifa.png';
 import careeonImg from '@/assets/careeon.png';
 import aasmImg from '@/assets/aasm.png';
+import statzookaImg from '@/assets/statzooka.png';
+import ripPaperImg from '@/assets/rip_paper.png';
 
 const projects = [
+  {
+    title: 'Statzooka',
+    category: 'CSV Analytics Workspace',
+    image: statzookaImg,
+    link: 'https://statzooka.snorribjarkason.com/',
+  },
+  {
+    title: 'Toward Physiology-based Sleep Assessment: the Emerging Clinical Role of Advanced RIP Technology',
+    category: 'Publication',
+    image: ripPaperImg,
+    link: 'https://link.springer.com/article/10.1007/s13665-026-00410-w',
+  },
   {
     title: 'Raft Consensus Algorithm',
     category: 'Distributed Systems',
