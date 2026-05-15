@@ -1,1 +1,1 @@
-This is my personal website where I tell you a little bit about myself :)
+This is my personal website, where I share a little bit about myself :)
