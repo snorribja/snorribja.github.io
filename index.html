@@ -4,21 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
 
-    <title>Snorri Bjarkason</title>
-    <meta name="description" content="Personal website of Snorri Bjarkason" />
+    <title>Snorri Bjarkason | Research Engineer & Software Developer</title>
+    <meta
+      name="description"
+      content="Snorri Bjarkason is a research engineer and software developer in Reykjavik, Iceland, working on AI-driven sleep diagnostics, distributed systems, and network security."
+    />
     <meta name="author" content="Snorri Bjarkason" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://snorribjarkason.com/" />
 
-    <meta property="og:title" content="Snorri Bjarkason" />
-    <meta property="og:description" content="Personal website of Snorri Bjarkason" />
+    <meta property="og:title" content="Snorri Bjarkason | Research Engineer & Software Developer" />
+    <meta
+      property="og:description"
+      content="Personal website of Snorri Bjarkason, a research engineer and software developer in Reykjavik, Iceland."
+    />
     <meta property="og:type" content="website" />
-
+    <meta property="og:url" content="https://snorribjarkason.com/" />
     <meta property="og:image" content="https://snorribjarkason.com/snorri_face.png" />
+    <meta property="og:image:alt" content="Snorri Bjarkason" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Snorri Bjarkason",
+        "url": "https://snorribjarkason.com/",
+        "image": "https://snorribjarkason.com/snorri_face.png",
+        "jobTitle": "Research Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Nox Medical"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/snorribjarkason",
+          "https://github.com/snorribja",
+          "https://www.instagram.com/snorri03/"
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>Snorri Bjarkason</h1>
+        <p>
+          Snorri Bjarkason is a research engineer and software developer in
+          Reykjavik, Iceland, working on AI-driven sleep diagnostics,
+          distributed systems, and network security.
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
