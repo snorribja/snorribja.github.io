@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -50,7 +50,7 @@
     --shadow-glow: 0 0 40px hsla(270, 80%, 65%, 0.15);
     --shadow-card: 0 4px 32px hsla(0, 0%, 0%, 0.4);
 
-    --ff-display: 'Syne', sans-serif;
+    --ff-display: 'Geist', sans-serif;
     --ff-body: 'Inter', sans-serif;
 
     --sidebar-background: 231 10% 10%;
@@ -109,6 +109,13 @@
 
   .border-glow {
     box-shadow: 0 0 0 1px hsl(var(--accent) / 0.3), 0 0 20px hsl(var(--accent) / 0.1);
+  }
+
+  .hero-static-bg {
+    background:
+      radial-gradient(circle at 18% 22%, hsl(var(--accent) / 0.22), transparent 28%),
+      radial-gradient(circle at 78% 34%, hsl(280 70% 50% / 0.16), transparent 24%),
+      linear-gradient(135deg, hsl(var(--background)) 0%, hsl(265 15% 12%) 100%);
   }
 
   .section-fade-in {

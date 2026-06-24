@@ -42,14 +42,14 @@ const experiences = [
   },
 ];
 
-export default function ExperienceSection() {
+export default function ExperienceSection({ id = 'experience' }: { id?: string }) {
   const [current, setCurrent] = useState(0);
 
   const prev = () => setCurrent((c) => (c - 1 + experiences.length) % experiences.length);
   const next = () => setCurrent((c) => (c + 1) % experiences.length);
 
   return (
-    <section id="experience" className="py-24 overflow-hidden">
+    <section id={id} className="py-24 overflow-hidden">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -150,9 +150,9 @@ function CourseCard({ item, delay }: { item: typeof courseItems[0]; delay: numbe
   );
 }
 
-export default function EducationSection() {
+export default function EducationSection({ id = 'education' }: { id?: string }) {
   return (
-    <section id="education" className="py-24">
+    <section id={id} className="py-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

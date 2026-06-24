@@ -15,9 +15,9 @@ const skillColumns = [
   },
 ];
 
-export default function SkillsSection() {
+export default function SkillsSection({ id = 'skills' }: { id?: string }) {
   return (
-    <section id="skills" className="py-24">
+    <section id={id} className="py-24">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

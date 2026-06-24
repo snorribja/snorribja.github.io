@@ -15,8 +15,13 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY >= 80);
-    window.addEventListener('scroll', onScroll);
+    const onScroll = () => {
+      const nextScrolled = window.scrollY >= 80;
+      setScrolled((current) => (current === nextScrolled ? current : nextScrolled));
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -29,8 +34,8 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-40 transition-all duration-300"
       style={{
-        background: scrolled ? 'hsl(var(--background) / 0.9)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        background: scrolled ? 'hsl(var(--background) / 0.96)' : 'transparent',
+        backdropFilter: 'none',
         borderBottom: scrolled ? '1px solid hsl(var(--border))' : '1px solid transparent',
       }}
     >

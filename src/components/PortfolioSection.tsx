@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
-import raftImg from '@/assets/raft.png';
-import flappyImg from '@/assets/flappy.png';
-import fifaImg from '@/assets/fifa.png';
-import careeonImg from '@/assets/careeon.png';
-import aasmImg from '@/assets/aasm.png';
-import statzookaImg from '@/assets/statzooka.png';
-import ripPaperImg from '@/assets/rip_paper.png';
+import raftImg from '@/assets/raft_900.webp';
+import flappyImg from '@/assets/flappy_900.webp';
+import fifaImg from '@/assets/fifa_900.webp';
+import careeonImg from '@/assets/careeon_900.webp';
+import aasmImg from '@/assets/aasm_900.webp';
+import statzookaImg from '@/assets/statzooka_900.webp';
+import ripPaperImg from '@/assets/rip_paper_900.webp';
 
 const projects = [
   {
@@ -54,7 +54,7 @@ const projects = [
   },
 ];
 
-export default function PortfolioSection() {
+export default function PortfolioSection({ id = 'portfolio' }: { id?: string }) {
   const [current, setCurrent] = useState(0);
 
   const visible = 3;
@@ -68,7 +68,7 @@ export default function PortfolioSection() {
   const canNext = current < total - visible;
 
   return (
-    <section id="portfolio" className="py-24 overflow-hidden">
+    <section id={id} className="py-24 overflow-hidden">
       <div className="container">
         <div className="flex items-end justify-between mb-12">
           <motion.div

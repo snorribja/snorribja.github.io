@@ -1,31 +1,41 @@
-import { Suspense, lazy } from 'react';
-import { motion } from 'framer-motion';
+import { useMemo } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 import DecryptedText from './DecryptedText';
+import Ferrofluid from './Ferrofluid';
 import { Download } from 'lucide-react';
-import snorriFace from '@/assets/snorri_face.png';
-
-const Dither = lazy(() => import('./Dither'));
+import snorriFace460 from '@/assets/snorri_face_460.webp';
+import snorriFace920 from '@/assets/snorri_face_920.webp';
 
 export default function HeroSection() {
+  const prefersReducedMotion = useReducedMotion();
+  const ferrofluidColors = useMemo(
+    () => ['#A65EED', '#9D26D9', '#C4B5FD', '#E9D5FF'],
+    [],
+  );
+
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
       aria-label="home"
     >
-      {/* Dithered wave background */}
+      {/* Ferrofluid background */}
       <div className="absolute inset-0 z-0">
-        <Suspense fallback={null}>
-          <Dither
-            waveColor={[0.45, 0.1, 0.9]}
-            waveSpeed={0.04}
-            waveFrequency={2.8}
-            waveAmplitude={0.35}
-            colorNum={4}
-            pixelSize={2}
-            enableMouseInteraction={true}
-            mouseRadius={0.8}
-          />
-        </Suspense>
+        <div className="absolute inset-0 hero-static-bg" />
+        <Ferrofluid
+          colors={ferrofluidColors}
+          speed={0.5}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.1}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.5}
+          glow={2}
+          flowDirection="down"
+          opacity={1}
+          mouseInteraction={false}
+          paused={prefersReducedMotion ?? false}
+        />
       </div>
 
       {/* Dark overlay */}
@@ -168,7 +178,7 @@ export default function HeroSection() {
             className="hidden xl:flex justify-center items-center"
           >
             <div className="relative flex justify-center items-center">
-              <motion.div
+              <div
                 className="absolute blur-3xl opacity-50"
                 style={{
                   width: '520px',
@@ -176,46 +186,43 @@ export default function HeroSection() {
                   background:
                     'radial-gradient(circle, hsl(var(--accent) / 0.6), hsl(var(--accent) / 0.2) 50%, transparent 70%)',
                 }}
-                animate={{
-                  scale: [1, 1.12, 1],
-                  opacity: [0.4, 0.65, 0.4],
-                }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               />
 
-              <motion.div
-                animate={{
-                  borderRadius: [
-                    '60% 40% 55% 45% / 50% 60% 40% 50%',
-                    '45% 55% 40% 60% / 60% 40% 55% 45%',
-                    '55% 45% 60% 40% / 45% 55% 50% 50%',
-                    '60% 40% 55% 45% / 50% 60% 40% 50%',
-                  ],
-                  y: [0, -14, 0, 14, 0],
-                  x: [0, 6, 0, -6, 0],
-                }}
-                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+              <div
                 style={{
                   width: '460px',
                   height: '460px',
                   overflow: 'hidden',
+                  borderRadius: '60% 40% 55% 45% / 50% 60% 40% 50%',
                   border: '2px solid hsl(var(--accent) / 0.45)',
                   boxShadow:
                     '0 0 80px hsl(var(--accent) / 0.3), inset 0 0 40px hsl(var(--accent) / 0.1)',
                   position: 'relative',
                 }}
               >
-                <img
-                  src={snorriFace}
-                  alt="Snorri Bjarkason"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'top',
-                  }}
-                />
-              </motion.div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={`${snorriFace460} 460w, ${snorriFace920} 920w`}
+                    sizes="460px"
+                  />
+                  <img
+                    src="/snorri_face.png"
+                    alt="Snorri Bjarkason"
+                    width={920}
+                    height={905}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top',
+                    }}
+                  />
+                </picture>
+              </div>
             </div>
           </motion.div>
         </div>
